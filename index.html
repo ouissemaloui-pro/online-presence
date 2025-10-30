@@ -13,6 +13,26 @@
     <meta property="og:url" content="https://ouissemaloui.com">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Custom Deep Navy Palette
+              'navy': {
+                '900': '#0F172A', // Darker base for Hero/Footer
+                '800': '#1E293B', // Darker accent for buttons/contact
+              },
+              // A sharp, technical accent color
+              'cyan': { 
+                '400': '#22D3EE',
+                '500': '#06B6D4',
+              },
+            }
+          }
+        }
+      }
+    </script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,41 +45,40 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <header class="sticky top-0 z-50 bg-white shadow-md">
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-            <div class="text-xl font-bold text-indigo-600">Ouissem Aloui</div>
+            <div class="text-xl font-bold text-navy-800">Ouissem Aloui</div>
             <nav class="space-x-4">
-                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-150">About</a>
-                <a href="#expertise" class="text-gray-600 hover:text-indigo-600 transition duration-150">Expertise</a>
-                <a href="#contact" class="px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition duration-150 shadow-md">Get in Touch</a>
+                <a href="#about" class="text-gray-600 hover:text-navy-800 transition duration-150">About</a>
+                <a href="#expertise" class="text-gray-600 hover:text-navy-800 transition duration-150">Expertise</a>
+                <a href="#contact" class="px-4 py-2 bg-navy-800 text-white text-sm font-medium rounded-lg hover:bg-navy-900 transition duration-150 shadow-md">Get in Touch</a>
             </nav>
         </div>
     </header>
 
-    <section id="hero" class="bg-gray-900 text-white pt-24 pb-32">
+    <section id="hero" class="bg-navy-900 text-white pt-24 pb-32 shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span class="inline-block px-3 py-1 text-sm font-semibold text-indigo-400 bg-indigo-900/50 rounded-full mb-4 uppercase tracking-wider">20 Years of B2B International Expertise</span>
+            <span class="inline-block px-3 py-1 text-sm font-semibold text-cyan-400 bg-navy-800/50 rounded-full mb-4 uppercase tracking-wider border border-cyan-400/50">20 Years of B2B International Expertise</span>
             <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
                 Global Commercial Leader
-                <span class="block text-indigo-400">Turning Innovation into Sustainable Growth.</span>
+                <span class="block text-cyan-400">Turning Innovation into Sustainable Growth.</span>
             </h1>
             <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Blending deep technical precision with senior commercial strategy to scale complex solutions globally across EMEA and Asia.
             </p>
             
             <div class="space-x-4">
-                <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-lg shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
+                <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-lg shadow-lg text-navy-900 bg-cyan-400 hover:bg-cyan-500 transition duration-300 transform hover:scale-105">
                     Discuss a Partnership
                 </a>
-                <a href="#about" class="inline-flex items-center justify-center px-8 py-4 border-2 border-indigo-500 text-base font-medium rounded-lg text-indigo-400 hover:bg-indigo-800 transition duration-300 transform hover:scale-105">
+                <a href="#about" class="inline-flex items-center justify-center px-8 py-4 border-2 border-cyan-400 text-base font-medium rounded-lg text-cyan-400 hover:bg-navy-800 transition duration-300 transform hover:scale-105">
                     View Profile
                 </a>
             </div>
-            
         </div>
     </section>
 
-    <section id="about" class="py-16 bg-white">
+    <section id="about" class="py-16 bg-white shadow-inner">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Executive Summary</h2>
 
@@ -84,24 +103,24 @@
             <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Core Areas of Expertise</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-indigo-500 transform hover:scale-[1.02] transition duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600 mb-4" viewBox="0 0 20 20" fill="currentColor">
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-cyan-400 transform hover:scale-[1.02] transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-500 mb-4" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" />
                     </svg>
                     <h3 class="text-xl font-semibold text-gray-900 mb-3">Global Commercial Scaling</h3>
                     <p class="text-gray-600">Proven track record in driving <strong>YoY growth &gt; 100%</strong> and leading multi-regional B2B operations across EMEA, GCC, and Asia.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-indigo-500 transform hover:scale-[1.02] transition duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600 mb-4" viewBox="0 0 20 20" fill="currentColor">
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-cyan-400 transform hover:scale-[1.02] transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-500 mb-4" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l.4-.173A1 1 0 005.5 16V5.414L10 7.854l4.5-2.44V16a1 1 0 00.5.836l.4.173a1 1 0 001.169-1.409l-7-14z" />
                     </svg>
                     <h3 class="text-xl font-semibold text-gray-900 mb-3">Deep Technical Commercialization</h3>
                     <p class="text-gray-600">Expertise in commercializing sophisticated DeepTech, including <strong>AI, Simulation, and complex embedded software solutions</strong>.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-indigo-500 transform hover:scale-[1.02] transition duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600 mb-4" viewBox="0 0 20 20" fill="currentColor">
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-cyan-400 transform hover:scale-[1.02] transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-500 mb-4" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0115 11h2a3 3 0 013 3v4h-4zM4.75 12.094A5.973 5.973 0 004 15v3H0v-3a5.972 5.972 0 014.75-2.906z" />
                     </svg>
                     <h3 class="text-xl font-semibold text-gray-900 mb-3">Strategic P&L & C-Level Negotiation</h3>
@@ -111,32 +130,33 @@
         </div>
     </section>
 
-    <section id="contact" class="bg-indigo-600 py-20">
-    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-4xl font-extrabold text-white mb-8">Ready to Accelerate Your Global Strategy?</h2>
+    <section id="contact" class="bg-navy-800 py-20">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold text-white mb-8">Ready to Accelerate Your Global Strategy?</h2>
 
-        <form action="https://formspree.io/f/xwpwqwlz" method="POST" class="bg-white p-8 rounded-xl shadow-2xl space-y-4 text-left">
-            
-            <input type="text" name="name" placeholder="Full Name" required 
-                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-gray-800" />
-            
-            <input type="email" name="_replyto" placeholder="Your Email Address" required 
-                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-gray-800" />
-            
-            <textarea name="message" rows="4" placeholder="How can I help you achieve your global goals?" required 
-                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-gray-800"></textarea>
-            
-            <button type="submit" class="w-full inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-lg shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
-                Send Message
-            </button>
-        </form>
+            <form action="https://formspree.io/f/xwpwqwlz" method="POST" class="bg-white p-8 rounded-xl shadow-2xl space-y-4 text-left">
+                
+                <input type="text" name="name" placeholder="Full Name" required 
+                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-cyan-500 focus:border-cyan-500 text-gray-800" />
+                
+                <input type="email" name="_replyto" placeholder="Your Email Address" required 
+                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-cyan-500 focus:border-cyan-500 text-gray-800" />
+                
+                <textarea name="message" rows="4" placeholder="How can I help you achieve your global goals?" required 
+                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-cyan-500 focus:border-cyan-500 text-gray-800"></textarea>
+                
+                <button type="submit" class="w-full inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-lg shadow-lg text-navy-900 bg-cyan-400 hover:bg-cyan-500 transition duration-300 transform hover:scale-105">
+                    Send Message
+                </button>
+            </form>
 
-        <p class="text-sm text-indigo-200 mt-6">
-            All inquiries are handled confidentially and sent directly to your email inbox.
-        </p>
-    </div>
-</section>
-    <footer class="bg-gray-900 py-6">
+            <p class="text-sm text-cyan-400/80 mt-6">
+                All inquiries are handled confidentially and sent directly to a **secured email inbox**.
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-navy-900 py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
             &copy; 2025 Ouissem Aloui Professional Profile. All rights reserved.
         </div>
@@ -144,5 +164,3 @@
 
 </body>
 </html>
-
-
