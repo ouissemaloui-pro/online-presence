@@ -3,207 +3,370 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ouissem Aloui | Global Commercial Leader</title>
-
-  <meta name="description" content="Ouissem Aloui — Global Commercial Leader in AI, Mobility & Deep Tech. Turning innovation into sustainable growth through strategic sales, partnerships, and global expansion.">
+  <title>Ouissem Aloui | Global Commercial Leader in Deep Tech</title>
+  <meta name="description" content="20 years driving $1M to $100M+ growth in AI, simulation, and deep tech across EMEA and Asia. Engineer-turned-CCO specializing in complex B2B sales.">
   <meta property="og:title" content="Ouissem Aloui | Global Commercial Leader">
-  <meta property="og:description" content="Driving deep tech commercialization and growth across Europe, Asia & the Middle East.">
+  <meta property="og:description" content="Scaling deep tech from innovation to sustainable revenue. AI • Simulation • Autonomous Systems.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="./profile-ouissem-aloui.jpg">
   <meta property="og:url" content="https://ouissemaloui.com">
   <link rel="icon" href="./profile-ouissem-aloui.jpg" type="image/jpeg">
-
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            'navy': {
-              '900': '#0F172A',
-              '800': '#1E293B',
+            navy: { 900: '#0A0E27', 800: '#1E293B', 700: '#334155' },
+            cyan: { 400: '#22D3EE', 500: '#06B6D4', 600: '#0891B2' },
+            accent: '#F59E0B'
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'glow': 'glow 2s ease-in-out infinite alternate',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-20px)' }
             },
-            'cyan': { 
-              '400': '#22D3EE',
-              '500': '#06B6D4',
-            },
+            glow: {
+              '0%': { boxShadow: '0 0 5px rgba(34, 211, 238, 0.5)' },
+              '100%': { boxShadow: '0 0 20px rgba(34, 211, 238, 0.8)' }
+            }
           }
         }
       }
     }
   </script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-    
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-
-    /* 👇 fade + slide animation */
+    body { font-family: 'Inter', sans-serif; }
     .fade-up {
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1s ease, transform 1s ease;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
     }
-
     .fade-up.show {
       opacity: 1;
       transform: translateY(0);
     }
+    .gradient-text {
+      background: linear-gradient(135deg, #22D3EE 0%, #06B6D4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    /* Mobile menu */
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .mobile-menu.open {
+      max-height: 500px;
+    }
   </style>
 </head>
+<body class="bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 text-gray-100">
 
-<body class="bg-gray-50 text-gray-800">
-
-    <header class="sticky top-0 z-50 bg-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-            <div class="text-xl font-bold text-navy-800">Ouissem Aloui</div>
-            <nav class="space-x-4">
-                <a href="#about" class="text-gray-600 hover:text-navy-800 transition duration-150">About</a>
-                <a href="#expertise" class="text-gray-600 hover:text-navy-800 transition duration-150">Expertise</a>
-                <a href="#contact" 
-   class="px-4 py-2 bg-navy-800 text-white text-sm font-medium rounded-lg 
-          hover:bg-navy-900 transition duration-300 shadow-md 
-          hover:shadow-[0_0_15px_3px_rgba(6,182,212,0.6)] hover:scale-105">
-  Get in Touch
-</a>
-
-            </nav>
+  <!-- Header -->
+  <header class="sticky top-0 z-50 glass shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <div class="text-2xl font-bold">
+          <span class="text-white">Ouissem</span> <span class="gradient-text">Aloui</span>
         </div>
-    </header>
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="#about" class="text-gray-300 hover:text-cyan-400 transition duration-200 font-medium">About</a>
+          <a href="#expertise" class="text-gray-300 hover:text-cyan-400 transition duration-200 font-medium">Expertise</a>
+          <a href="#impact" class="text-gray-300 hover:text-cyan-400 transition duration-200 font-medium">Impact</a>
+          <a href="#speaking" class="text-gray-300 hover:text-cyan-400 transition duration-200 font-medium">Speaking</a>
+          <a href="#contact" class="px-5 py-2.5 bg-gradient-to-r from-cyan-400 to-cyan-600 text-navy-900 font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-400/50 transition duration-300 transform hover:scale-105">
+            Contact
+          </a>
+        </nav>
 
-    <section id="hero" 
-  class="relative flex items-center justify-center text-white h-screen overflow-hidden shadow-xl"
-  style="background: url('./city-background.png') center/cover no-repeat;">
-  
-  <!-- overlay -->
-  <div class="absolute inset-0 bg-navy-900/70 backdrop-blur-sm"></div>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-cyan-400 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
 
-  <div class="relative z-10 text-center max-w-3xl px-6">
-    <img src="./profile-ouissem-aloui.jpg" alt="Ouissem Aloui" 
-         class="fade-up w-40 h-40 md:w-48 md:h-48 rounded-full mx-auto mb-6 border-4 border-cyan-400 shadow-lg object-cover">
-    
-    <span class="inline-block px-3 py-1 text-sm font-semibold text-cyan-400 bg-navy-800/50 rounded-full mb-4 uppercase tracking-wider border border-cyan-400/50">20 Years of B2B International Expertise</span>
-    
-    <h1 class="fade-up text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-  Global Commercial Leader
-  <span class="block text-cyan-400">Turning Innovation into Sustainable Growth.</span>
-</h1>
-
-    <p class="fade-up text-xl text-gray-200 mb-8">
-      Blending deep technical precision with senior commercial strategy to scale complex solutions globally across EMEA and Asia.
-    </p>
-
-    <div class="space-x-4">
-      <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-lg shadow-lg text-navy-900 bg-cyan-400 hover:bg-cyan-500 transition duration-300 transform hover:scale-105">
-        Discuss a Partnership
-      </a>
-      <a href="#about" class="inline-flex items-center justify-center px-8 py-4 border-2 border-cyan-400 text-base font-medium rounded-lg text-cyan-400 hover:bg-navy-800 transition duration-300 transform hover:scale-105">
-        View Profile
-      </a>
+      <!-- Mobile Nav -->
+      <nav id="mobile-menu" class="mobile-menu md:hidden pb-4">
+        <a href="#about" class="block py-2 text-gray-300 hover:text-cyan-400 transition">About</a>
+        <a href="#expertise" class="block py-2 text-gray-300 hover:text-cyan-400 transition">Expertise</a>
+        <a href="#impact" class="block py-2 text-gray-300 hover:text-cyan-400 transition">Impact</a>
+        <a href="#speaking" class="block py-2 text-gray-300 hover:text-cyan-400 transition">Speaking</a>
+        <a href="#contact" class="block mt-3 px-5 py-2.5 bg-gradient-to-r from-cyan-400 to-cyan-600 text-navy-900 font-semibold rounded-lg text-center">
+          Contact
+        </a>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
+  <!-- Hero -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-[url('./city-background.png')] bg-cover bg-center opacity-10"></div>
+    
+    <!-- Animated background elements -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-cyan-400/10 rounded-full blur-3xl animate-float"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl animate-float" style="animation-delay: 3s"></div>
+    </div>
 
-    <section id="about" class="py-16 bg-white shadow-inner">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Executive Summary</h2>
+    <div class="relative z-10 text-center max-w-5xl px-6 py-12">
+      <img src="./profile-ouissem-aloui.jpg" alt="Ouissem Aloui" 
+           class="fade-up w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 border-4 border-cyan-400 shadow-xl shadow-cyan-400/50 object-cover">
+      
+      <span class="fade-up inline-block px-4 py-2 text-xs md:text-sm font-bold text-cyan-400 bg-cyan-400/10 rounded-full mb-6 uppercase tracking-wider border border-cyan-400/30">
+        20 Years • B2B • €1M to €100M+ Revenue Growth
+      </span>
+      
+      <h1 class="fade-up text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-6">
+        Engineer Who Speaks<br/>
+        <span class="gradient-text">C-Level Language</span>
+      </h1>
+      
+      <p class="fade-up text-lg md:text-xl text-gray-300 mb-4 max-w-3xl mx-auto leading-relaxed">
+        Turning deep tech innovation into sustainable revenue streams across EMEA and Asia.
+      </p>
+      
+      <p class="fade-up text-base md:text-lg text-cyan-400 font-semibold mb-10">
+        AI • Simulation • Autonomous Systems • Digital Twins
+      </p>
+      
+      <div class="fade-up flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-400 to-cyan-600 text-navy-900 font-bold rounded-lg shadow-lg shadow-cyan-400/30 hover:shadow-cyan-400/60 transition duration-300 transform hover:scale-105">
+          Let's Scale Your Deep Tech
+        </a>
+        <a href="#impact" class="w-full sm:w-auto px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400/10 transition duration-300 transform hover:scale-105">
+          See Track Record
+        </a>
+      </div>
+    </div>
+  </section>
 
-            <div class="space-y-6 text-lg leading-relaxed text-gray-600">
-                <p>
-                    I am a seasoned <strong>Global Commercial Leader and Engineer</strong> with 20 years of international B2B experience, dedicated to **transforming innovation into sustainable growth** across global markets. I specialize in blending deep technical precision (EE background) with senior commercial strategy to deliver high-impact results in complex, high-stakes markets.
-                </p>
-                <p>
-                    I strive for global expansion and scaling, from managing operations exceeding <strong>$100M USD</strong> to pushing for <strong>YoY growth &gt; 100%</strong> in new segments. I lead by securing high-value contracts, managing project P&L, and building resilient sales teams and processes.
-                </p>
-                <p>
-                    My technical fluency covers <strong>Simulation/Digital Twin commercialization, AI-related solutions, power distribution, and e-mobility.</strong> I leverage this knowledge to engage key stakeholders and C-Level executives, positioning sophisticated technology as a strategic pillar for their business success.
-                </p>
-            </div>
+  <!-- Stats Section -->
+  <section class="py-16 bg-gradient-to-r from-navy-800 to-navy-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+        <div class="fade-up text-center p-6 glass rounded-xl">
+          <div class="text-4xl md:text-5xl font-black gradient-text mb-2">20+</div>
+          <div class="text-sm md:text-base text-gray-400 font-medium">Years International B2B</div>
         </div>
-    </section>
-
-    <div class="max-w-6xl mx-auto border-t border-gray-200"></div>
-
-    <section id="expertise" class="py-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Core Areas of Expertise</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-cyan-400 transform hover:scale-[1.02] transition duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-500 mb-4" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" />
-                    </svg>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Global Commercial Scaling</h3>
-                    <p class="text-gray-600">Proven track record in driving <strong>YoY growth &gt; 100%</strong> and leading multi-regional B2B operations across EMEA, GCC, and Asia.</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-cyan-400 transform hover:scale-[1.02] transition duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-500 mb-4" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l.4-.173A1 1 0 005.5 16V5.414L10 7.854l4.5-2.44V16a1 1 0 00.5.836l.4.173a1 1 0 001.169-1.409l-7-14z" />
-                    </svg>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Deep Technical Commercialization</h3>
-                    <p class="text-gray-600">Expertise in commercializing sophisticated DeepTech, including <strong>AI, Simulation, and complex embedded software solutions</strong>.</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-cyan-400 transform hover:scale-[1.02] transition duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-500 mb-4" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0115 11h2a3 3 0 013 3v4h-4zM4.75 12.094A5.973 5.973 0 004 15v3H0v-3a5.972 5.972 0 014.75-2.906z" />
-                    </svg>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Strategic P&L & C-Level Negotiation</h3>
-                    <p class="text-gray-600">Proven ability to manage <strong>multi-million dollar project P&L</strong> and navigate complex government and C-Level procurement processes.</p>
-                </div>
-            </div>
+        <div class="fade-up text-center p-6 glass rounded-xl" style="transition-delay: 0.1s">
+          <div class="text-4xl md:text-5xl font-black gradient-text mb-2">$100M+</div>
+          <div class="text-sm md:text-base text-gray-400 font-medium">Revenue Managed</div>
         </div>
-    </section>
-
-    <section id="contact" class="bg-navy-800 py-20">
-        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-extrabold text-white mb-8">Ready to Accelerate Your Global Strategy?</h2>
-
-            <form action="https://formspree.io/f/xwpwqwlz" method="POST" class="bg-white p-8 rounded-xl shadow-2xl space-y-4 text-left">
-                
-                <input type="text" name="name" placeholder="Full Name" required 
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-cyan-500 focus:border-cyan-500 text-gray-800" />
-                
-                <input type="email" name="_replyto" placeholder="Your Email Address" required 
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-cyan-500 focus:border-cyan-500 text-gray-800" />
-                
-                <textarea name="message" rows="4" placeholder="How can I help you achieve your global goals?" required 
-                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-cyan-500 focus:border-cyan-500 text-gray-800"></textarea>
-                
-                <button type="submit" class="w-full inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-lg shadow-lg text-navy-900 bg-cyan-400 hover:bg-cyan-500 transition duration-300 transform hover:scale-105">
-                    Send Message
-                </button>
-            </form>
-
-            <p class="text-sm text-cyan-400/80 mt-6">
-                All inquiries are handled confidentially.
-            </p>
+        <div class="fade-up text-center p-6 glass rounded-xl" style="transition-delay: 0.2s">
+          <div class="text-4xl md:text-5xl font-black gradient-text mb-2">>100%</div>
+          <div class="text-sm md:text-base text-gray-400 font-medium">YoY Growth Achieved</div>
         </div>
-    </section>
-
-    <footer class="bg-navy-900 py-6">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
-            &copy; 2025 Ouissem Aloui Professional Profile. All rights reserved.
+        <div class="fade-up text-center p-6 glass rounded-xl" style="transition-delay: 0.3s">
+          <div class="text-4xl md:text-5xl font-black gradient-text mb-2">3</div>
+          <div class="text-sm md:text-base text-gray-400 font-medium">Continents, 20+ Markets</div>
         </div>
-    </footer>
-<script>
-  // Fade-in when visible
-  const faders = document.querySelectorAll('.fade-up');
-  const appear = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('show');
-    });
-  }, { threshold: 0.2 });
+      </div>
+    </div>
+  </section>
 
-  faders.forEach(el => appear.observe(el));
-</script>
+  <!-- About -->
+  <section id="about" class="py-20 bg-navy-900">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="fade-up text-3xl md:text-4xl font-black text-white mb-6 text-center">
+        The <span class="gradient-text">Bridge</span> Between Innovation and Revenue
+      </h2>
+      <div class="fade-up w-20 h-1 bg-gradient-to-r from-cyan-400 to-cyan-600 mx-auto mb-12"></div>
+      
+      <div class="space-y-6 text-base md:text-lg leading-relaxed text-gray-300">
+        <p class="fade-up">
+          I'm not just another sales leader. As an <strong class="text-white">Electrical Engineer (M.Sc.)</strong> who's spent two decades in the commercial trenches, I understand both the technical complexity of your innovation and the strategic imperatives of your C-suite buyers.
+        </p>
+        <p class="fade-up">
+          My track record speaks volumes: from scaling operations from <strong class="text-cyan-400">$1M to $100M+</strong> at TCL Communication across 14 countries, to driving <strong class="text-cyan-400">>100% YoY growth</strong> as CCO at AILiveSim while opening markets in USA, KSA, Israel, Japan, and South Korea.
+        </p>
+        <p class="fade-up">
+          I specialize in <strong class="text-white">deep tech commercialization</strong> where technical credibility is non-negotiable: AI simulation platforms, digital twins, autonomous systems, e-mobility, and industrial IoT. I've secured seed funding from Silo AI and AMD Ventures, negotiated with government procurement offices, and built distribution networks that actually deliver.
+        </p>
+        <p class="fade-up text-xl font-semibold text-cyan-400 border-l-4 border-cyan-400 pl-6">
+          Engineering depth + Commercial savvy = Sustainable global growth
+        </p>
+      </div>
+    </div>
+  </section>
 
-</body>
-</html>
+  <!-- Expertise -->
+  <section id="expertise" class="py-20 bg-gradient-to-br from-navy-800 to-navy-900">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="fade-up text-3xl md:text-4xl font-black text-white mb-6 text-center">
+        What I <span class="gradient-text">Deliver</span>
+      </h2>
+      <div class="fade-up w-20 h-1 bg-gradient-to-r from-cyan-400 to-cyan-600 mx-auto mb-16"></div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="fade-up glass p-6 md:p-8 rounded-2xl hover:shadow-xl hover:shadow-cyan-400/20 transition duration-300 group">
+          <div class="w-14 h-14 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition duration-300">
+            <svg class="w-7 h-7 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Global Market Entry</h3>
+          <p class="text-gray-400 leading-relaxed">Proven strategies for expanding deep tech solutions into EMEA, GCC, and Asia-Pacific markets with sustainable revenue models.</p>
+        </div>
+
+        <div class="fade-up glass p-6 md:p-8 rounded-2xl hover:shadow-xl hover:shadow-cyan-400/20 transition duration-300 group" style="transition-delay: 0.1s">
+          <div class="w-14 h-14 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition duration-300">
+            <svg class="w-7 h-7 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Technical Credibility</h3>
+          <p class="text-gray-400 leading-relaxed">Engineering background enables authentic conversations with technical stakeholders and C-level decision makers in complex sales cycles.</p>
+        </div>
+
+        <div class="fade-up glass p-6 md:p-8 rounded-2xl hover:shadow-xl hover:shadow-cyan-400/20 transition duration-300 group" style="transition-delay: 0.2s">
+          <div class="w-14 h-14 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition duration-300">
+            <svg class="w-7 h-7 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Partner Ecosystem Building</h3>
+          <p class="text-gray-400 leading-relaxed">Structured networks of agents, distributors, and system integrators across Germany, France, Japan, and beyond.</p>
+        </div>
+
+        <div class="fade-up glass p-6 md:p-8 rounded-2xl hover:shadow-xl hover:shadow-cyan-400/20 transition duration-300 group" style="transition-delay: 0.3s">
+          <div class="w-14 h-14 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition duration-300">
+            <svg class="w-7 h-7 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">P&L Management</h3>
+          <p class="text-gray-400 leading-relaxed">Full ownership of business unit economics, from accurate forecasting to licensing models that drive recurring revenue.</p>
+        </div>
+
+        <div class="fade-up glass p-6 md:p-8 rounded-2xl hover:shadow-xl hover:shadow-cyan-400/20 transition duration-300 group" style="transition-delay: 0.4s">
+          <div class="w-14 h-14 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition duration-300">
+            <svg class="w-7 h-7 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Deep Tech Expertise</h3>
+          <p class="text-gray-400 leading-relaxed">Specialization in AI simulation, digital twins, autonomous systems, e-mobility, and industrial automation solutions.</p>
+        </div>
+
+        <div class="fade-up glass p-6 md:p-8 rounded-2xl hover:shadow-xl hover:shadow-cyan-400/20 transition duration-300 group" style="transition-delay: 0.5s">
+          <div class="w-14 h-14 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition duration-300">
+            <svg class="w-7 h-7 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Government & Enterprise Sales</h3>
+          <p class="text-gray-400 leading-relaxed">Navigate complex procurement processes, tender management, and multi-stakeholder negotiations at the highest levels.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section id="impact" class="py-20 bg-navy-900">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="fade-up text-3xl md:text-4xl font-black text-white mb-6 text-center">
+        Measurable <span class="gradient-text">Impact</span>
+      </h2>
+      <div class="fade-up w-20 h-1 bg-gradient-to-r from-cyan-400 to-cyan-600 mx-auto mb-16"></div>
+
+      <div class="space-y-8">
+        <div class="fade-up glass p-6 md:p-8 rounded-2xl border-l-4 border-cyan-400">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-2 md:mb-0">AILiveSim (CCO)</h3>
+            <span class="text-cyan-400 font-semibold">2020 - 2025</span>
+          </div>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-start">
+              <span class="text-cyan-400 mr-3 mt-1">▸</span>
+              <span>Built sales & marketing functions from zero, reaching <strong class="text-white">€1M+ revenue by 2024</strong></span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-cyan-400 mr-3 mt-1">▸</span>
+              <span>Achieved <strong class="text-white">>100% YoY growth</strong> for 3 consecutive years</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-cyan-400 mr-3 mt-1">▸</span>
+              <span>Secured seed funding from <strong class="text-white">Silo AI and AMD Ventures</strong></span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-cyan-400 mr-3 mt-1">▸</span>
+              <span>Expanded into <strong class="text-white">USA, KSA, Israel, Japan, South Korea</strong></span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-cyan-400 mr-3 mt-1">▸</span>
+              <span>Opened verticals: <strong class="text-white">Automotive, Aerospace, Defense, Maritime</strong></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="fade-up glass p-6 md:p-8 rounded-2xl border-l-4 border-cyan-400">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-2 md:mb-0">TCL Communication (Sales Operations Manager)</h3>
+            <span class="text-cyan-400 font-semibold">2010 - 2017</span>
+          </div>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-start">
+              <span class="text-cyan-400 mr-3 mt-1">▸</span>
+              <span>Scaled regional operations from <strong class="text-white">$1M to $100M+</strong> across 14 countries</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-cyan-400 mr-3 mt-1">▸</span>
+              <span>Led cross-functional team managing Sales, Operations, and Finance</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-cyan-400 mr-3 mt-1">▸</span>
+              <span>Tripled market share in Levant, increased profit by <strong class="text-white">1.5× to $4M in 6 months</strong></span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-cyan-400 mr-3 mt-1">▸</span>
+              <span>Co-created IoT product line: launched <strong class="text-white">LIFE Home Monitoring Kit</strong>, pioneering operator-branded IoT</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="fade-up glass p-6 md:p-8 rounded-2xl border-l-4 border-cyan-400">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-2 md:mb-0">L7 Drive (VP International Sales)</h3>
+            <span class="text-cyan-400 font-semibold">2018 - 2020</span>
+          </div>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-start">
+              <span class="text-cyan-400 mr-3 mt-1">▸</span>
+              <span>Developed global strategy for electric drivetrain commercialization</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-cyan-400 mr-3 mt-1">▸</span>
+              <span>Established <strong class="text-white">Joint Venture in India</strong> for light EV market acceleration</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-cyan-400 mr-3 mt-1">▸</span>
+              <span>Built OEM partnerships across <strong class="text-white">Germany, India, Southeast Asia</strong></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speaking & Thought Leadership -->
+  <section id="speaking" class="py-20 bg-gradient-to-br from-navy-800 to-navy-900">
+    <div class="
