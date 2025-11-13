@@ -45,13 +45,22 @@
   <style>
     body { font-family: 'Inter', sans-serif; }
     .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .fade-up.show {
       opacity: 1;
       transform: translateY(0);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-up.animate {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     .gradient-text {
       background: linear-gradient(135deg, #22D3EE 0%, #06B6D4 100%);
@@ -64,7 +73,6 @@
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
-    /* Mobile menu */
     .mobile-menu {
       max-height: 0;
       overflow: hidden;
@@ -119,8 +127,6 @@
 
   <!-- Hero -->
   <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0 bg-[url('./city-background.png')] bg-cover bg-center opacity-10"></div>
-    
     <!-- Animated background elements -->
     <div class="absolute inset-0 overflow-hidden">
       <div class="absolute top-20 left-10 w-72 h-72 bg-cyan-400/10 rounded-full blur-3xl animate-float"></div>
@@ -305,68 +311,4 @@
             </li>
             <li class="flex items-start">
               <span class="text-cyan-400 mr-3 mt-1">▸</span>
-              <span>Secured seed funding from <strong class="text-white">Silo AI and AMD Ventures</strong></span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-cyan-400 mr-3 mt-1">▸</span>
-              <span>Expanded into <strong class="text-white">USA, KSA, Israel, Japan, South Korea</strong></span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-cyan-400 mr-3 mt-1">▸</span>
-              <span>Opened verticals: <strong class="text-white">Automotive, Aerospace, Defense, Maritime</strong></span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="fade-up glass p-6 md:p-8 rounded-2xl border-l-4 border-cyan-400">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-            <h3 class="text-xl md:text-2xl font-bold text-white mb-2 md:mb-0">TCL Communication (Sales Operations Manager)</h3>
-            <span class="text-cyan-400 font-semibold">2010 - 2017</span>
-          </div>
-          <ul class="space-y-3 text-gray-300">
-            <li class="flex items-start">
-              <span class="text-cyan-400 mr-3 mt-1">▸</span>
-              <span>Scaled regional operations from <strong class="text-white">$1M to $100M+</strong> across 14 countries</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-cyan-400 mr-3 mt-1">▸</span>
-              <span>Led cross-functional team managing Sales, Operations, and Finance</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-cyan-400 mr-3 mt-1">▸</span>
-              <span>Tripled market share in Levant, increased profit by <strong class="text-white">1.5× to $4M in 6 months</strong></span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-cyan-400 mr-3 mt-1">▸</span>
-              <span>Co-created IoT product line: launched <strong class="text-white">LIFE Home Monitoring Kit</strong>, pioneering operator-branded IoT</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="fade-up glass p-6 md:p-8 rounded-2xl border-l-4 border-cyan-400">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-            <h3 class="text-xl md:text-2xl font-bold text-white mb-2 md:mb-0">L7 Drive (VP International Sales)</h3>
-            <span class="text-cyan-400 font-semibold">2018 - 2020</span>
-          </div>
-          <ul class="space-y-3 text-gray-300">
-            <li class="flex items-start">
-              <span class="text-cyan-400 mr-3 mt-1">▸</span>
-              <span>Developed global strategy for electric drivetrain commercialization</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-cyan-400 mr-3 mt-1">▸</span>
-              <span>Established <strong class="text-white">Joint Venture in India</strong> for light EV market acceleration</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-cyan-400 mr-3 mt-1">▸</span>
-              <span>Built OEM partnerships across <strong class="text-white">Germany, India, Southeast Asia</strong></span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Speaking & Thought Leadership -->
-  <section id="speaking" class="py-20 bg-gradient-to-br from-navy-800 to-navy-900">
-    <div class="
+              <span>Secured see
